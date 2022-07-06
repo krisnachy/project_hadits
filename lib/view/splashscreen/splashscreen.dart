@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text('Judul Aplikasi'),
-                      Lottie.network('https://assets2.lottiefiles.com/packages/lf20_TARZVI.json'),
+                      Lottie.asset('assets/splashscreen.json'),
                       Padding(padding: EdgeInsets.only(top: 10.0))
                     ],
                   ),
