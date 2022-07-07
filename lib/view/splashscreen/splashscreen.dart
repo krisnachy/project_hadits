@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:lottie/lottie.dart';
+import 'package:project_hadith/constant/sdp.dart';
 
 import 'package:project_hadith/view/pages/home/home_page.dart';
 
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    _loadWidget();
+    // _loadWidget();
   }
 
   _loadWidget() async {
@@ -33,49 +34,74 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    SDP.init(context);
     return Scaffold(
-      body: InkWell(
-        child: Stack(
-          fit: StackFit.expand,
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Expanded(
-                  flex: 7,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('Judul Aplikasi'),
-                      Lottie.asset('assets/splashscreen.json'),
-                      Padding(padding: EdgeInsets.only(top: 10.0))
-                    ],
-                  ),
-                ),
-                Expanded(
-                    child: Column(
+      backgroundColor: Colors.lightBlue,
+      body: SafeArea(
+        child: InkWell(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Expanded(
+                flex: 7,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CircularProgressIndicator(),
+                    Text('Hadist Harian'),
                     Container(
-                      height: 10,
+                      height: SDP.sdp(430),
+                      width: SDP.sdp(314),
+                      margin: EdgeInsets.fromLTRB(
+                          SDP.sdp(30), SDP.sdp(10), SDP.sdp(30), 0),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(SDP.sdp(20)))),
+                      child: Stack(
+                        children: [
+                          Align(
+                              alignment: Alignment.center,
+                              child: Lottie.asset('assets/splashscreen.json')),
+                          Align(
+                            alignment: Alignment.bottomCenter,
+                            child: Container(
+                              height: SDP.sdp(50),
+                              width: SDP.sdp(155),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.all(
+                                    Radius.circular(SDP.sdp(30))),
+                                child: LinearProgressIndicator(
+                                  color: Colors.amber,
+                                  backgroundColor: Color(0xffD6D6D6),
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Spacer(),
-                        Text(_versionName),
-                        Spacer(
-                          flex: 4,
-                        ),
-                        Text('Androing'),
-                        Spacer(),
-                      ],
-                    )
                   ],
-                ))
-              ],
-            )
-          ],
+                ),
+              ),
+              Expanded(
+                  child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Spacer(),
+                      Text(_versionName),
+                      Spacer(
+                        flex: 4,
+                      ),
+                      Text('Androing'),
+                      Spacer(),
+                    ],
+                  )
+                ],
+              ))
+            ],
+          ),
         ),
       ),
     );
