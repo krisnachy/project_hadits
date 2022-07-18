@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:project_hadith/utils/color_helper.dart';
 import 'package:project_hadith/view/splashscreen/splashscreen.dart';
 
 void main() {
@@ -10,7 +12,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: ColorHelper.mainColor,
+      statusBarIconBrightness: Brightness.dark,
+      statusBarBrightness: Brightness.light,
+    ));
+    
+    return const MaterialApp(
       title: "Hadits",
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
