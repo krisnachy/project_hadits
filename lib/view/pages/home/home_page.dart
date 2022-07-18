@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_hadith/utils/color_helper.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -10,10 +11,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        color: Colors.white,
-        child: Text('Berhasil'),
+    return Scaffold(
+      backgroundColor: ColorHelper.mainColor,
+      body: Center(
+        child: Container(
+          color: Colors.white,
+          child: Text('Berhasil'),
+        ),
       ),
     );
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:lottie/lottie.dart';
 import 'package:project_hadith/constant/sdp.dart';
+import 'package:project_hadith/utils/color_helper.dart';
 
 import 'package:project_hadith/view/pages/home/home_page.dart';
 
@@ -14,7 +15,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   final String _versionName = 'V1.0';
-  final splashDelay = 5;
+  final splashDelay = 3;
   double value = 0;
 
   @override
@@ -42,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     SDP.init(context);
     return Scaffold(
-      backgroundColor: Colors.lightBlue,
+      backgroundColor: ColorHelper.mainColor,
       body: SafeArea(
         child: InkWell(
           child: Column(
