@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:lottie/lottie.dart';
 import 'package:project_hadith/constant/sdp.dart';
 import 'package:project_hadith/utils/color_helper.dart';
+import 'package:project_hadith/utils/navbar.dart';
 
 import 'package:project_hadith/view/pages/home/home_page.dart';
 
@@ -36,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void navigationPage() {
     Navigator.pushReplacement(context,
-        MaterialPageRoute(builder: (BuildContext context) => HomePage()));
+        MaterialPageRoute(builder: (BuildContext context) => BottomNavigation()));
   }
 
   @override
@@ -72,9 +73,9 @@ class _SplashScreenState extends State<SplashScreen> {
                               alignment: Alignment.center,
                               child: Lottie.asset('assets/splashscreen.json')),
                           Positioned(
-                            bottom: -25,
+                            bottom: -17,
                             child: Container(
-                              height: SDP.sdp(50),
+                              height: SDP.sdp(30),
                               width: SDP.sdp(155),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.all(
