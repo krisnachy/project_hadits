@@ -15,11 +15,17 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   final String _versionName = 'V1.0';
   final splashDelay = 5;
+  double value = 0;
 
   @override
   void initState() {
     super.initState();
     // _loadWidget();
+    Timer.periodic(Duration(milliseconds: 200), (timer) {
+      setState(() {
+        value = value + 0.1;
+      });
+    });
   }
 
   _loadWidget() async {
@@ -73,6 +79,7 @@ class _SplashScreenState extends State<SplashScreen> {
                                 borderRadius: BorderRadius.all(
                                     Radius.circular(SDP.sdp(30))),
                                 child: LinearProgressIndicator(
+                                  value: value,
                                   color: Colors.amber,
                                   backgroundColor: Color(0xffD6D6D6),
                                 ),
