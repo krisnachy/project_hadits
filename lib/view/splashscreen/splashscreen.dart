@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // _loadWidget();
+    _loadWidget();
     Timer.periodic(Duration(milliseconds: 200), (timer) {
       setState(() {
         value = value + 0.1;
