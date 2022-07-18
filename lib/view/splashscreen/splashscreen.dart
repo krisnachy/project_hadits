@@ -58,12 +58,14 @@ class _SplashScreenState extends State<SplashScreen> {
                           borderRadius:
                               BorderRadius.all(Radius.circular(SDP.sdp(20)))),
                       child: Stack(
+                        alignment: Alignment.center,
+                        clipBehavior: Clip.none,
                         children: [
                           Align(
                               alignment: Alignment.center,
                               child: Lottie.asset('assets/splashscreen.json')),
-                          Align(
-                            alignment: Alignment.bottomCenter,
+                          Positioned(
+                            bottom: -25,
                             child: Container(
                               height: SDP.sdp(50),
                               width: SDP.sdp(155),
