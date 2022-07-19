@@ -86,6 +86,9 @@ flutter:
         - asset: assets/font/Poppins-Regular.ttf
         - asset: assets/font/Poppins-Bold.ttf
         - asset: assets/font/Poppins-SemiBold.ttf
+    - family: HadistNavbar
+      fonts:
+        - asset: assets/font/HadistNavbar.ttf
 
   #   - family: Schyler
   #     fonts:

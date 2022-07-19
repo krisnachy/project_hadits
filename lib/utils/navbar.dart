@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:project_hadith/utils/color_helper.dart';
+import 'package:project_hadith/utils/hadist_navbar_icons.dart';
+import 'package:project_hadith/view/pages/bookmarks/bookmarks.dart';
 import 'package:project_hadith/view/pages/home/home_page.dart';
+import 'package:project_hadith/view/pages/home/home_tab.dart';
 import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
 
 class BottomNavigation extends StatefulWidget {
@@ -29,18 +32,12 @@ class _BottomNavigationState extends State<BottomNavigation> {
         controller: pageController,
         children: [
           HomePage(),
-          Container(
-            alignment: Alignment.center,
-            child: Text("Page 2"),
-          ),
+          HomeTab(),
           Container(
             alignment: Alignment.center,
             child: Text("Page 3"),
           ),
-          Container(
-            alignment: Alignment.center,
-            child: Text("Page 4"),
-          ),
+          Bookmarks()
         ],
       ),
       bottomNavigationBar: DecoratedBox(
@@ -50,33 +47,40 @@ class _BottomNavigationState extends State<BottomNavigation> {
               offset: Offset(0, 4),
               blurRadius: 8.0)
         ]),
-        child: WaterDropNavBar(
-            backgroundColor: navBarColor,
-            barItems: <BarItem>[
-              BarItem(
-                filledIcon: Icons.home_rounded,
-                outlinedIcon: Icons.home_outlined,
-              ),
-              BarItem(
-                  filledIcon: Icons.phone_android_rounded,
-                  outlinedIcon: Icons.phone_android_outlined),
-              BarItem(
-                filledIcon: Icons.trending_flat_rounded,
-                outlinedIcon: Icons.trending_flat_outlined,
-              ),
-              BarItem(
-                  filledIcon: Icons.favorite_rounded,
-                  outlinedIcon: Icons.favorite_border_rounded),
-            ],
-            selectedIndex: selectedIndex,
-            onItemSelected: (int index) {
-              setState(() {
-                selectedIndex = index;
-              });
-              pageController.animateToPage(selectedIndex,
-                  duration: const Duration(milliseconds: 400),
-                  curve: Curves.easeOutQuad);
-            }),
+        child: ClipRRect(
+          borderRadius: const BorderRadius.vertical(
+            top: Radius.circular(16),
+          ),
+          child: WaterDropNavBar(
+              inactiveIconColor: ColorHelper.greyColor,
+              waterDropColor: ColorHelper.mainYellow,
+              backgroundColor: navBarColor,
+              barItems: <BarItem>[
+                BarItem(
+                  filledIcon: HadistNavbar.ic_home,
+                  outlinedIcon: HadistNavbar.ic_home,
+                ),
+                BarItem(
+                    filledIcon: HadistNavbar.ic_fourth,
+                    outlinedIcon: HadistNavbar.ic_fourth),
+                BarItem(
+                  filledIcon: HadistNavbar.ic_third,
+                  outlinedIcon: HadistNavbar.ic_third,
+                ),
+                BarItem(
+                    filledIcon: HadistNavbar.ic_save,
+                    outlinedIcon: HadistNavbar.ic_save),
+              ],
+              selectedIndex: selectedIndex,
+              onItemSelected: (int index) {
+                setState(() {
+                  selectedIndex = index;
+                });
+                pageController.animateToPage(selectedIndex,
+                    duration: const Duration(milliseconds: 400),
+                    curve: Curves.easeOutQuad);
+              }),
+        ),
       ),
     );
   }

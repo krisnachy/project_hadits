@@ -6,4 +6,5 @@ class ColorHelper {
   static const thirdColor = Color(0xff0AA1DD);
   static const mainDark = Color(0xff2155CD);
   static const greyColor = Color(0xff8789A3);
+  static const mainYellow = Color(0xffFFB830);
 }
