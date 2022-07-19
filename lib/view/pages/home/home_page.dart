@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:project_hadith/constant/sdp.dart';
 import 'package:project_hadith/utils/color_helper.dart';
+import 'package:project_hadith/utils/drawer_page.dart';
 import 'package:project_hadith/view/pages/home/home_tab.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
@@ -47,6 +48,7 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
+      drawer: DrawerPage(),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
