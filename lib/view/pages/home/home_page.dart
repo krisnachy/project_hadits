@@ -19,9 +19,14 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 24.0),
-          child: SvgPicture.asset('assets/ic_burger.svg'),
+        leading: Builder(
+          builder: (context) => InkWell(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 24.0),
+              child: SvgPicture.asset('assets/ic_burger.svg'),
+            ),
+            onTap: () => Scaffold.of(context).openDrawer(),
+          ),
         ),
         title: const Padding(
           padding: EdgeInsets.only(left: 24.0),

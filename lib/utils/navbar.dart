@@ -68,8 +68,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
                   outlinedIcon: Icons.calendar_month_rounded,
                 ),
                 BarItem(
-                  filledIcon: HadistNavbar.ic_save,
-                  outlinedIcon: HadistNavbar.ic_save,
+                  filledIcon: HadistNavbar.ic_third,
+                  outlinedIcon: HadistNavbar.ic_third,
                 ),
               ],
               selectedIndex: selectedIndex,
