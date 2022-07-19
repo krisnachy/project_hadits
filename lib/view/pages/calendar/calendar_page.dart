@@ -19,7 +19,7 @@ class _CalendarState extends State<Calendar> {
         centerTitle: true,
         title: const Padding(
           padding: EdgeInsets.only(left: 24.0),
-          child: Text("Jadwal",
+          child: Text("Kalender",
               style: TextStyle(
                   fontFamily: "Poppins",
                   fontSize: 20,

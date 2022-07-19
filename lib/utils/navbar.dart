@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project_hadith/utils/color_helper.dart';
 import 'package:project_hadith/utils/hadist_navbar_icons.dart';
-import 'package:project_hadith/view/pages/bookmarks/bookmarks.dart';
-import 'package:project_hadith/view/pages/calendar/calendar.dart';
+import 'package:project_hadith/view/pages/bookmarks/bookmarks_page.dart';
+import 'package:project_hadith/view/pages/calendar/calendar_page.dart';
 import 'package:project_hadith/view/pages/home/home_page.dart';
 import 'package:project_hadith/view/pages/home/home_tab.dart';
 import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';

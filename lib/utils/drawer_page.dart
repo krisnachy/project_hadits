@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_hadith/utils/color_helper.dart';
 import 'package:project_hadith/utils/hadist_navbar_icons.dart';
-import 'package:project_hadith/view/pages/bookmarks/bookmarks.dart';
+import 'package:project_hadith/view/pages/bookmarks/bookmarks_page.dart';
 
 class DrawerPage extends StatelessWidget {
   const DrawerPage({Key? key}) : super(key: key);
