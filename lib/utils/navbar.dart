@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project_hadith/utils/color_helper.dart';
 import 'package:project_hadith/utils/hadist_navbar_icons.dart';
 import 'package:project_hadith/view/pages/bookmarks/bookmarks.dart';
+import 'package:project_hadith/view/pages/calendar/calendar.dart';
 import 'package:project_hadith/view/pages/home/home_page.dart';
 import 'package:project_hadith/view/pages/home/home_tab.dart';
 import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
@@ -33,10 +34,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         children: [
           HomePage(),
           HomeTab(),
-          Container(
-            alignment: Alignment.center,
-            child: Text("Page 3"),
-          ),
+          Calendar(),
           Bookmarks()
         ],
       ),
@@ -62,15 +60,17 @@ class _BottomNavigationState extends State<BottomNavigation> {
                   outlinedIcon: HadistNavbar.ic_home,
                 ),
                 BarItem(
-                    filledIcon: HadistNavbar.ic_fourth,
-                    outlinedIcon: HadistNavbar.ic_fourth),
-                BarItem(
-                  filledIcon: HadistNavbar.ic_third,
-                  outlinedIcon: HadistNavbar.ic_third,
+                  filledIcon: HadistNavbar.ic_fourth,
+                  outlinedIcon: HadistNavbar.ic_fourth,
                 ),
                 BarItem(
-                    filledIcon: HadistNavbar.ic_save,
-                    outlinedIcon: HadistNavbar.ic_save),
+                  filledIcon: Icons.calendar_today_rounded,
+                  outlinedIcon: Icons.calendar_month_rounded,
+                ),
+                BarItem(
+                  filledIcon: HadistNavbar.ic_save,
+                  outlinedIcon: HadistNavbar.ic_save,
+                ),
               ],
               selectedIndex: selectedIndex,
               onItemSelected: (int index) {
