@@ -40,16 +40,22 @@ class _BookmarksState extends State<Bookmarks> {
         ],
       ),
       backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          Row(
-            children: [
-              Icon(Icons.create_new_folder_outlined),
-              Text("Add new collection"),
-              SvgPicture.asset("assets/ic_burger_triplet.svg")
-            ],
-          )
-        ],
+      body: Padding(
+        padding: const EdgeInsets.only(left: 24.0, right: 24.0),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Icon(Icons.create_new_folder_outlined),
+                Text("Add new collection"),
+                Align(
+                    alignment: Alignment.topRight,
+                    child: SvgPicture.asset("assets/ic_burger_triplet.svg"))
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

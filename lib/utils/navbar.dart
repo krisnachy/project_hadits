@@ -55,6 +55,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
               inactiveIconColor: ColorHelper.greyColor,
               waterDropColor: ColorHelper.mainYellow,
               backgroundColor: navBarColor,
+              bottomPadding: 5,
               barItems: <BarItem>[
                 BarItem(
                   filledIcon: HadistNavbar.ic_home,
