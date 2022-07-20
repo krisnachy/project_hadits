@@ -64,8 +64,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
                   outlinedIcon: HadistNavbar.ic_fourth,
                 ),
                 BarItem(
-                  filledIcon: Icons.calendar_today_rounded,
-                  outlinedIcon: Icons.calendar_month_rounded,
+                  filledIcon: Icons.calendar_month_rounded,
+                  outlinedIcon: Icons.calendar_today_rounded,
                 ),
                 BarItem(
                   filledIcon: HadistNavbar.ic_third,

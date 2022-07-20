@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_hadith/constant/sdp.dart';
 import 'package:project_hadith/utils/color_helper.dart';
 import 'package:project_hadith/utils/hadist_navbar_icons.dart';
 import 'package:project_hadith/view/pages/bookmarks/bookmarks_page.dart';
@@ -12,15 +13,20 @@ class DrawerPage extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          const DrawerHeader(
-            decoration: BoxDecoration(
-                color: ColorHelper.mainDark,
-                image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: AssetImage('assets/ic_quran.png'))),
-            child: Text(
-              'Daily Hadist',
-              style: TextStyle(color: Colors.white, fontSize: 25),
+          SizedBox(
+            width: SDP.sdp(320),
+            height: SDP.sdp(101),
+            child: const DrawerHeader(
+              margin: const EdgeInsets.only(top: 15),
+              decoration: BoxDecoration(
+                  color: ColorHelper.mainColor,
+                  image: DecorationImage(
+                      fit: BoxFit.fill,
+                      image: AssetImage('assets/ic_drawer.png'))),
+              child: Text(
+                'Daily Hadist',
+                style: TextStyle(color: Colors.white, fontSize: 25),
+              ),
             ),
           ),
           ListTile(

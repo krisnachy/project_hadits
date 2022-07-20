@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-      drawer: DrawerPage(),
+      drawer: SizedBox(width: SDP.sdp(225), child: const DrawerPage()),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
