@@ -42,10 +42,11 @@ class _CalendarState extends State<Calendar> {
                 return Center(
                   child: Text(
                     text,
-                    style: TextStyle(color: Colors.red),
+                    style: const TextStyle(color: Colors.red),
                   ),
                 );
               }
+              return null;
             },
           ),
         ),
